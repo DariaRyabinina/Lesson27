@@ -1,5 +1,6 @@
 # language: ru
-
+@allTest
+@less27
 Функционал: работа Less27 https:www.sberbank
 
   Сценарий: проверка страницы «Сбербанк» - Частным клиентам

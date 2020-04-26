@@ -21,7 +21,7 @@ public class less27Steps {
     public static final Logger LOGG = LoggerFactory.getLogger(less27Steps.class);
 
     @Допустим("выполнен переход на https: www_sberbank")
-    public void go_to_https_www_sberbank() {
+    public void goToSberbankStep() {
         open("https://www.sberbank.ru/");
         getWebDriver().manage().window().maximize();
 
@@ -29,7 +29,7 @@ public class less27Steps {
     }
 
     @Допустим("проверка названия титула {string}")
-    public void verify_Title(String nameTitle) {
+    public void verifyTitleStep(String nameTitle) {
         Less27Obj less27Obj = new Less27Obj();
         boolean a = less27Obj.getTitle(nameTitle);
         System.out.println(a);
@@ -39,34 +39,34 @@ public class less27Steps {
     }
 
     @Допустим("выполнен переход на вкладку {string}")
-    public void go_to_(String nameMenu) {
+    public void goToMenuStep(String nameMenu) {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.movement_cursor(nameMenu);
         less27Obj.goToMenu("Вклады");
     }
 
     @Допустим("выполнен переход на меню {string}")
-    public void go_to_menu_Vklad(String nameMenu) {
+    public void goToMenuVkladStep(String nameMenu) {
         Less27Obj less27Obj = new Less27Obj();
-        less27Obj.go_to_menu_vklad(nameMenu);
+        less27Obj.goToMenuVkladObj(nameMenu);
 
     }
 
     @Допустим("проверка отображения чек-боксов")
-    public void verify_Check_box(List<String> checkBoxList) {
+    public void verifyCheckBoxStep(List<String> checkBoxList) {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.visibleCheckBox(checkBoxList);
 
     }
 
     @Допустим("проверка чек-бокса «Онлайн»")
-    public void selected_Online() {
+    public void selectedOnlineStep() {
         boolean selectedOnline = $(byXpath("//div[text()='Онлайн']/preceding-sibling::input")).isSelected();
         Assert.assertTrue(selectedOnline);
     }
 
     @Допустим("проверка отражения вкладов")
-    public void verefy_Vklad(List<String> vkladList) {
+    public void verefyVkladStep(List<String> vkladList) {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.visibleVklad(vkladList);
 
@@ -74,7 +74,7 @@ public class less27Steps {
 
 
     @Допустим("установка чек-боксов")
-    public void enter_Check_Box(List<String> entrChecBoxValue) {
+    public void enterCheckBoxStep(List<String> entrChecBoxValue) {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.enterCheckBox(entrChecBoxValue);
 
@@ -82,24 +82,24 @@ public class less27Steps {
     }
 
     @Допустим("проверка отображения вкладов Отсутствуют")
-    public void verefy_vklad_del(List<String> vkladListDel) {
+    public void verefyVkladDelStep(List<String> vkladListDel) {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.visibleVkladDel(vkladListDel);
     }
 
     @Допустим("нажать кнопку Подробнее")
-    public void entr_button() {
+    public void entrButton() {
         $(byXpath("//span[text()='Подробнее']")).click();
     }
 
     @Допустим("проверка надписи Вклад Управляй.")
-    public void проверка_надписи_Вклад_Управляй() {
+    public void verefyStringUpravly() {
         Less27Obj less27Obj = new Less27Obj();
         less27Obj.verefyValue();
     }
 
     @Допустим("переключение на новое окно")
-    public void swich_to_window() {
+    public void swichToWindow() {
         Selenide.switchTo().window(1);
     }
 }

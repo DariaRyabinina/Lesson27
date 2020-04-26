@@ -37,7 +37,7 @@ public class Less27Obj {
         $(byXpath("//a[@class='lg-menu__sub-link' and text()='" + nameMenu + "']")).doubleClick();
     }
 
-    public void go_to_menu_vklad(String nameMenu) {
+    public void goToMenuVkladObj(String nameMenu) {
 
         List<SelenideElement> listMenuVklad = $$(byCssSelector("li.tabs-container__tab"));
         listMenuVklad.get(1).doubleClick();
