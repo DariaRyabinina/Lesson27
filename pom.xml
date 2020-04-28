@@ -10,7 +10,6 @@
 
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <testng.version>7.1.0</testng.version>
@@ -19,6 +18,7 @@
         <slf4j-log4j12.version>1.7.30</slf4j-log4j12.version>
         <browsermob-core.version>2.1.5</browsermob-core.version>
         <aspectj.version>1.8.10</aspectj.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
